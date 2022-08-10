@@ -1,1 +1,1 @@
-Replace MD5-based signatures with Blake2b.
+[v] Replace MD5-based signatures with Blake2b. [DONE]

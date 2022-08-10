@@ -15,11 +15,11 @@ class Neuromancer:
             return False
 
     def get_similarity(self, score):
-        return round((score / 32) * 100, 2)
+        return round((score / 128) * 100, 2)
 
     def compare(self, sign_a, sign_b):
         score = 0
-        for i in range(32):
+        for i in range(128):
             if sign_a[i] == sign_b[i]:
                 score += 1
         return score
@@ -34,7 +34,7 @@ class Neuromancer:
         try:
             with open(self.filename, "rb") as fl:
                 data = fl.read()
-            self.file_hash = hashlib.md5(data).hexdigest()
+            self.file_hash = hashlib.blake2b(data).hexdigest()
         except Exception as error:
             print(error)
 # ----------------------------------------------------------------------------- #
@@ -80,4 +80,3 @@ for key in signatures.keys():
         sys.exit()
 # No sample found:
 print("\033[32m[+] No sample found for {0}.\033[00m".format(sys.argv[1]))
-
