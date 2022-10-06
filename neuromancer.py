@@ -79,4 +79,4 @@ for key in signatures.keys():
         print("\033[93m[!] Possible sample found: {0} [{1}%]\033[00m".format(key, percent))
         sys.exit()
 # No sample found:
-print("\033[32m[+] No sample found for {0}.\033[00m".format(sys.argv[1]))
+print("\033[32m[*] No sample found for {0}.\033[00m".format(sys.argv[1]))
