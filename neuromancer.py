@@ -1,6 +1,6 @@
 import hashlib
 import json, sys
-# ----------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
 # Prepare Class:
 class Neuromancer:
     def __init__(self, filename, tolerance=15):
