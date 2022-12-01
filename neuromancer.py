@@ -3,7 +3,7 @@ import json, sys
 # ---------------------------------------------------------------------------- #
 # Prepare Class:
 class Neuromancer:
-    def __init__(self, filename, tolerance=15):
+    def __init__(self, filename, tolerance=10):
         self.filename = filename
         self.file_hash = ""
         self.tolerance = tolerance
